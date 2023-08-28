@@ -1,15 +1,25 @@
-.sclera{
-    border-radius: 50%;
-    position: relative;
-    width: 100px;
-    height: 100px;
-    background-color: white;
-}
-
-.pupil {
-    border-radius: 50%;
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    background-color: black;
-}
+    .sclera{
+        border-radius: 50%;
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: white;
+        
+        transform: translate(-50%, -50%);
+    }
+    
+    .inner_sclera {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+    }
+    
+    .pupil {
+        border-radius: 50%;
+        position: absolute;
+        top: 25%;
+        width: 60px;
+        height: 60px;
+        background-color: black;
+        transform: translateY(-8%);
+    }
