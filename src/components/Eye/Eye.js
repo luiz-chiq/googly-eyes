@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 function Eye({x, y, eyeX, eyeY}){
     const [angle, setAngle] = useState(0)
-    let hypot = Math.hypot(eyeY - y, eyeX - x)/3
+    let hypot = Math.hypot(eyeY - y, eyeX - x)/6
     if (hypot > 20) hypot = 20
 
     useEffect(() => {
@@ -14,7 +14,9 @@ function Eye({x, y, eyeX, eyeY}){
     return(
         <div className={styles.sclera} style={{left: `${eyeX}px`, top: `${eyeY}px`}}>
             <div className={styles.inner_sclera} style={{rotate: `${angle}deg`}}>
-                <div className={styles.pupil} style={{left: `${20 + hypot}%`}}/>
+                <div className={styles.pupil} style={{left: `${20 + hypot}%`}}>
+                    <div className={styles.inner_pupil} style={{rotate: `${-angle}deg`}}/>
+                </div>
             </div>
         </div>
     )

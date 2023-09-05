@@ -17,7 +17,7 @@ function Eyes({}){
     return(
         <div>
             <Eye x={x} y={y} eyeX={700} eyeY={400}/>
-            <Eye x={x} y={y} eyeX={820} eyeY={400}/>
+            <Eye x={x} y={y} eyeX={870} eyeY={400}/>
             {/* <Eye x={x} y={y} eyeX={300} eyeY={100}/>
             <Eye x={x} y={y} eyeX={400} eyeY={100}/>
             <Eye x={x} y={y} eyeX={500} eyeY={100}/>
