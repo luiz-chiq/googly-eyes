@@ -1,7 +1,7 @@
 import styles from "./Eye.module.css"
 import { useEffect, useState } from "react";
 
-function Eye({x, y, eyeX, eyeY}){
+function Eye({x, y, eyeX, eyeY, color}){
     const [angle, setAngle] = useState(0)
     let hypot = Math.hypot(eyeY - y, eyeX - x)/6
     if (hypot > 20) hypot = 20
@@ -15,7 +15,8 @@ function Eye({x, y, eyeX, eyeY}){
         <div className={styles.sclera} style={{left: `${eyeX}px`, top: `${eyeY}px`}}>
             <div className={styles.inner_sclera} style={{rotate: `${angle}deg`}}>
                 <div className={styles.pupil} style={{left: `${20 + hypot}%`}}>
-                    <div className={styles.inner_pupil} style={{rotate: `${-angle}deg`}}/>
+                    {color? <img className={styles.inner_pupil} style={{rotate: `${-angle}deg`}} src={color}/> :    
+                    <div className={styles.inner_pupil} style={{rotate: `${-angle}deg`}}/>}
                 </div>
             </div>
         </div>
