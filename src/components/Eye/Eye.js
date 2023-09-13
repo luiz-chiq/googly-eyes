@@ -15,8 +15,7 @@ function Eye({x, y, eyeX, eyeY, color}){
 
 
     return(
-        <Sclera positionX={eyeX} positionY={eyeY} style={{left: `${eyeX}px`, top: `${eyeY}px`}}>
-        {/* <Sclera style={{left: `${eyeX}px`, top: `${eyeY}px`}}> */}
+        <Sclera position_x={eyeX} position_y={eyeY}>
             <Inner_sclera style={{rotate: `${angle}deg`}}>
                 {/* <Pupil hypot={hypot}> */}
                 <Pupil style={{left: `${20 + hypot}%`}}>
